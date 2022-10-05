@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quantas caronas vai querer?<input id="ipt_carro" type="text">
+    A capacidade de passageiros que vai no veiculo? <input id="ipt_pessoas" type="text">
+    <button onclick="carona()">Carona</button>
+    <span id="span_msg"></span>
+</body>
+</html>
+
+<script>
+//      17. Incremente a questão anterior de tal forma que:
+// a) Também tenha um campo no qual o usuário indique a capacidade de passageiros 
+// que o veículo suporta
+// b) Ao clicar no botão, as frases só começam a mostrar que o passageiro terá que 
+// esperar quando a capacidade indicada em a) for excedida
+
+     function carona() {
+        var viagem = Number(ipt_carro.value)
+        var passageiros = Number(ipt_pessoas.value)
+        var contador = 0
+        
+        while (passageiros < 5 ) {
+            if (viagem == passageiros) {
+                span_msg.innerHTML += `${contador}`
+                contador++;
+            } else {
+                span_msg.innerHTML += `${contador}`
+                contador++;
+            }
+        }
+     }
+</script>

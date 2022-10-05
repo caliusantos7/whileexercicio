@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <input id="ipt_idade" type="text">
+    <button onclick="Idade()">Idade</button>
+    <span id="span_msg"></span>
+</body>
+</html>
+
+<script>
+    //   Primeira Infância: 0 a 4 anos
+    // - Pré-escolar: + de 4 aos 6 anos
+    // - Segunda Infância: + de 6 aos 10 anos
+    // - Adolescência: + de 10 aos 18 anos
+    // - Adulto: + de 18 até os 50 anos
+    // - Melhor idade: + de 50 anos até 100 anos
+    // - Matusalém: + de 100 anos 
+
+    function Idade() {
+
+        var idade = Number(ipt_idade.value)
+        var contador = 0;
+        
+        while (idade < 100) {
+            if (idade > 0 || idade < 4) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade +4;
+            }
+            if (idade > 4 || idade < 6) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade +6;
+            }
+            if (idade > 6 || idade < 10) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade + 10;
+            }
+            if (idade > 10 || idade < 18) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade + 18 ;
+            }
+            if (idade> 18 || idade < 50) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade + 50;
+            }
+            if (idade > 50|| idade < 100) {
+                span_msg.innerHTML += `${idade} <ul>`
+                    idade + 100;
+            }
+           else {
+            span_msg.innerHTML += `${idade}<ul>`
+           }
+        }
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos dias você faz musculação<input id="ipt_musc" type="text">
+
+    <button onclick="Exibir()">Exibir rotina mensal</button>
+    <b>Amor</b>
+    
+ 
+    <span id="span_mens"></span>
+</body>
+</html>
+
+
+<script>
+    function Exibir() {
+       var contador = 0 
+       var musculo = Number(ipt_musc.value)
+
+       while (musculo <= 30) {
+        span_mens.innerHTML += `<b>${musculo}<b>   Musculação <br> `
+        contador ++;
+
+        if (musculo <= 30) {
+         span_mens.innerHTML += `<b>${contador}<b>   Musculação <br> `
+         contador ++;
+           }    
+        else{
+            span_mens.innerHTML = `${contador}`
+        }
+    }
+}
+</script>
